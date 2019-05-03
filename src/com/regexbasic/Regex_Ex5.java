@@ -1,4 +1,4 @@
-package com.regex;
+package com.regexbasic;
 
 public class Regex_Ex5 {
 
