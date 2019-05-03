@@ -1,5 +1,7 @@
 I. Bảng regex:
 
+Note: Chỉ match 1 kí tự
+
 . : Khớp (match) với bất kỳ ký tự nào
 ^ : Khớp tại điểm bắt đầu
 $ : Khớp ở cuối dòng
