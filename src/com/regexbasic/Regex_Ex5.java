@@ -10,13 +10,15 @@ public class Regex_Ex5 {
 		boolean match = s1.matches(".");
 		System.out.println("-Match . " + match);
 
-		s1 = "abc";
+		s1 = "abc11111111111111";
 		System.out.println("s1=" + s1);
-		// Kiểm tra toàn bộ s1 - Khớp với bất kỳ ký tự nào ==> false (Rõ ràng, chuỗi 3 ký tự sao khớp với 1 ký tự bất kỳ?)
+		// Kiểm tra toàn bộ s1 - Khớp với bất kỳ ký tự nào ==> false (Rõ ràng, chuỗi 3
+		// ký tự sao khớp với 1 ký tự bất kỳ?)
 		match = s1.matches(".");
 		System.out.println("-Match . " + match);
 
-		// Kiểm tra toàn bộ s1 khớp với bất kỳ ký tự nào 0 hoặc nhiều lần - Kết hợp các quy tắc: . và * // ==> true
+		// Kiểm tra toàn bộ s1 khớp với bất kỳ ký tự nào 0 hoặc nhiều lần - Kết hợp các
+		// quy tắc: . và * // ==> true
 		match = s1.matches(".*");
 		System.out.println("-Match .* " + match);
 	}

@@ -27,6 +27,9 @@ $ : Kiểm tra kết thúc dòng.
 {X} : Xuất hiện X lần, {}
 {X,Y} : Xuất hiện trong khoảng X tới Y lần
 *? : * có nghĩa là xuất hiện 0 hoặc nhiều lần, thêm ? phía sau nghĩa là tìm kiếm khớp nhỏ nhất
+.* : Khớp với bất kỳ ký tự nào 0 hoặc nhiều lần 
+- Ex1: chuoi = "abc11111111111111"; 	match = chuoi.matches(".*") => return true
+- Ex2: chuoi = "mnp"; 	match = chuoi.matches("^m.+"); => return true
 
 II. Các ký tự đặc biệt trong Java Regex (Special characters):
 
