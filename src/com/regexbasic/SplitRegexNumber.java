@@ -6,9 +6,8 @@ public class SplitRegexNumber {
 		String TEXT = "1000,000,000";
 		System.out.println("TEXT=" + TEXT);
 
-		String newText = TEXT.replaceAll("(\\D+?)", "");
+		String newText = TEXT.replaceAll("\\D", "");
 
-//		String newText = TEXT.replaceAll("\\,", "");
 		System.out.println("New text=" + newText);
 	}
 }
