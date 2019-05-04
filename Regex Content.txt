@@ -1,6 +1,6 @@
 I. Bảng regex:
 
-Note: Chỉ match 1 kí tự
+Note: Chỉ match 1 ký tự
 
 . : Khớp (match) với bất kỳ ký tự nào
 ^ : Khớp tại điểm bắt đầu
@@ -41,3 +41,27 @@ match = s3.matches(".n{1,3}p$"); => return true
 II. Các ký tự đặc biệt trong Java Regex (Special characters):
 
 \.[{(*+?^$|
+
+III. Common Regex:
+
+. lấy 1 ký tự bất kỳ
+\D+: lấy ký tự đầu là chữ và ký tự đặc biệt, các ký tự còn lại bất kỳ
+\d+: lấy ký tự đầu là số, các ký tự còn lại bất kỳ
+123: match với 123
+...\D: 3 ký tự đầu bất kỳ, ký tự cuối là chữ và ký tự đặc biệt( không phải là số)
+[cmf]an: lấy c or m or f và 2 ký tự cuối là an
+[^drp]an: lấy ký tự đầu không phải là 1 trong 4 ký tự: c or m or f và 2 ký tự cuối là an
+[A-C][n-p][a-c]: lấy ký tự theo thứ tự alphabet a - z
+[^a-c][^a-c][^x-z]: lấy ký tự không theo thứ tự alphabet a - c và x - z
+waz{3,5}up: lấy ký tự w hoặc a hoặc z xuất hiện 3 đến 5 lần sau đó là up
+a{2,4}b{0,4}c{1,2}: lấy ký tự a xuất hiện 2 đến 4 lần, b xuất hiện 0 đến 4 lần, c xuất hiện 1 đến 2 lần
+aa+b*c+: lấy ký tự aa, sau đó + : sau đó a xuất hiện 1 hoặc nhiều lần, sau đó đến b xuất hiện 0 hoặc nhiều lần, sau đó
+đến c xuất hiện 1 hoặc nhiều lần
+\d+ files* found\?: lấy ký tự đầu là số xuất hiện 1 hoặc nhiều lần, sau đó đến file, s xuất hiện 0 hoặc nhiều lần, found và cuối cùng là dấu chấm hỏi
+\d\.\s+abc: ký tự đầu là số sau đó đến dấu chấm, tiếp là khoảng trắng xuất hiện 1 hoặc nhiều lần s+, cuối cùng là abc
+^Mission: successful$: bắt đầu là Mission và kết thúc là successful
+^(file.+).pdf$: bắt đầu là file, sau đó đến dấu chấm xuất hiện 1 hoặc nhiều lần, đuôi là .pdf
+(\w+ (\d+)) 	Jan 1987 và Jan 1987 1987
+(\d+)x(\d+): 	1280x720 và 1280 720
+I love (cats|dogs): lấy 	I love cats or dogs
+.*: lấy ký tự đầu tiên bất kỳ xuất hiện 0 hoặc nhiều lần
