@@ -3,7 +3,7 @@ package com.regexbasic;
 public class SplitWithRegex {
 
 	public static void main(String[] args) {
-		String TEXT = "This is my text";
+		String TEXT = "This     is     my     text";
 		System.out.println("TEXT=" + TEXT);
 		// Khoảng trắng xuất hiện 1 hoặc nhiều lần.
 		// Các ký tự khoảng trắng: \t\n\x0b\r\f
@@ -17,8 +17,8 @@ public class SplitWithRegex {
 			System.out.println(string);
 		}
 
-		// Thay thế tất cả các khoảng trắng với ký tự tab.
-		String newText = TEXT.replaceAll("\\s+", "\t");
-		System.out.println("New text=" + newText);
+		// Chuẩn hóa chuỗi
+		String newText = TEXT.replaceAll("\\s+", " ");
+		System.out.println("New text= " + newText);
 	}
 }
