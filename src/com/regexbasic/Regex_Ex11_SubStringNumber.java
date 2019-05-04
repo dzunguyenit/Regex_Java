@@ -9,15 +9,18 @@ public class Regex_Ex11_SubStringNumber {
 
 		String text = "123,000.000:999";
 
-		String[] newText = text.split("\\D");
+		String newText = text.replace("\\D", "");
 
-		for (String te : newText) {
-			System.out.println(te);
-		}
-
-//		System.out.println(StringUtils.join(newText, " "));
+			System.out.println(newText);
 		String totalString = StringUtils.join(newText);
+		int newNumber = Integer.parseInt(totalString);
+
+//		System.out.println(StringUtils.join(newText, ""));
+//		String totalString = StringUtils.join(newText);
 //		NumberUtils.createInteger(str)
+
+//		int t = NumberUtils.toInt(totalString);
+		System.out.println("tong " + newNumber);
 
 		int tong = (NumberUtils.toInt(totalString)) + 1;
 
