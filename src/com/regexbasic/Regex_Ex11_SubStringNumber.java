@@ -6,12 +6,20 @@ import java.util.regex.Pattern;
 public class Regex_Ex11_SubStringNumber {
 
 	public static void main(String[] args) {
-
-		String mydata = "some string with 'the data i want' inside";
-		Pattern pattern = Pattern.compile("'(.*?)'");
+		String newString = null;
+		String mydata = "some string with 9022 inside";
+		Pattern pattern = Pattern.compile("\\d+");
 		Matcher matcher = pattern.matcher(mydata);
-		if (matcher.find()) {
-			System.out.println(matcher.group(1));
+		if (matcher.find())
+
+		{
+			System.out.println(matcher.group());
+			newString = matcher.group();
 		}
+
+		int tong = Integer.parseInt(newString) + 3;
+
+		System.out.println("Tong = " + tong);
+
 	}
 }
