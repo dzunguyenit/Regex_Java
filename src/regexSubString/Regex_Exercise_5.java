@@ -1,12 +1,12 @@
 package regexSubString;
 
-public class Regex_Exercise_01 {
+public class Regex_Exercise_5 {
 
 	public static void main(String[] args) {
-		String regex = "\\d[\\,\\.]\\d*";
-		String TEXT1 = "3.14ABC";
+		String regex = "(\\w+)\\.(jpg|png|gif)$";
+		String TEXT1 = "img0912.jpg";
 		System.out.println("Before TEXT1= " + TEXT1);
-		String TEXT2 = "5,14ALP";
+		String TEXT2 = "favicon.gif";
 		System.out.println("Before TEXT2= " + TEXT2);
 
 		System.out.println("After TEXT1= " + Regex.getSubString(TEXT1, regex));
