@@ -59,9 +59,57 @@ aa+b*c+: lấy ký tự aa, sau đó + : sau đó a xuất hiện 1 hoặc nhi�
 đến c xuất hiện 1 hoặc nhiều lần
 \d+ files* found\?: lấy ký tự đầu là số xuất hiện 1 hoặc nhiều lần, sau đó đến file, s xuất hiện 0 hoặc nhiều lần, found và cuối cùng là dấu chấm hỏi
 \d\.\s+abc: ký tự đầu là số sau đó đến dấu chấm, tiếp là khoảng trắng xuất hiện 1 hoặc nhiều lần s+, cuối cùng là abc
-^Mission: successful$: bắt đầu là Mission và kết thúc là successful
+^Mission: ful$: bắt đầu là Mission và kết thúc là ful
 ^(file.+).pdf$: bắt đầu là file, sau đó đến dấu chấm xuất hiện 1 hoặc nhiều lần, đuôi là .pdf
 (\w+ (\d+)) 	Jan 1987 và Jan 1987 1987
 (\d+)x(\d+): 	1280x720 và 1280 720
 I love (cats|dogs): lấy 	I love cats or dogs
 .*: lấy ký tự đầu tiên bất kỳ xuất hiện 0 hoặc nhiều lần
+
+Exercise 1: Matching Numbers
+
+^-?\d+(,\d)*(\.[\d])*e?(\d*.)?(.\d)$
+
+Match	3.14529	
+Match	-255.34	
+Match	128	
+Match	1.9e10	
+Match	123,340.00
+
+Skip	720p
+
+Exercise 2: Matching Phone Numbers
+
+1?[\s-]?\(?(\d{3})\)?[\s-]*5{3}[\s-]?\d{4}
+
+Task	Text	Capture Groups	 
+Capture	415-555-1234	415	
+Capture	650-555-2345	650	
+Capture	(416)555-3456	416	
+Capture	202 555 4567	202	
+Capture	4035555678	403	
+Capture	1 416 555 9292	416	
+
+Exercise 3: Matching Emails
+
+^([\w\.]*)
+
+Task	Text	Capture Groups	 
+Capture	tom@hogwarts.com	tom	Success
+Capture	tom.riddle@hogwarts.com	tom.riddle	Success
+Capture	tom.riddle+regexone@hogwarts.com	tom.riddle	Success
+Capture	tom@hogwarts.eu.com	tom	Success
+Capture	potter@hogwarts.com	potter	Success
+Capture	harry@hogwarts.com	harry	Success
+Capture	hermione+regexone@hogwarts.com	hermione	Success
+
+Exercise 4: Capturing HTML Tags
+
+1. Thẻ tag
+<(\w+)
+
+<a
+<div
+
+2. >([\w\s]*)<
+
