@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class Regex_Exercise_Group {
 
 	public static void main(String[] args) {
-		String regex = "(\\d\\s?) .* (\\d+) .*";
+		String regex = "(\\d\\s?)(\\d+).*(\\d+)";
 		String TEXT1 = "AA09233 9991,.99";
 
 		Pattern pattern = Pattern.compile(regex);
