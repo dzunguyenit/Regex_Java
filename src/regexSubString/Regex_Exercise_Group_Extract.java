@@ -9,7 +9,7 @@ public class Regex_Exercise_Group_Extract {
 		String stringToSearch = "score and seven years ago our fathers";
 
 		// specify that we want to search for two groups in the string
-		Pattern p = Pattern.compile("(\\S+or\\S+) .* (\\S+the\\S+)");
+		Pattern p = Pattern.compile("(scor\\S+) .* (\\S+the\\S+)");
 		Matcher m = p.matcher(stringToSearch);
 		String total = "";
 		// if our pattern matches the string, we can try to extract our groups
