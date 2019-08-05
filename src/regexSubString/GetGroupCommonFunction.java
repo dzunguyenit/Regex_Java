@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class GetGroupCommonFunction {
 
 	public static void main(String[] args) {
-		String total = getTextRegex("Showing 11 to 20 of (\\d+) entrie", "Showing 11 to 20 of 57 entrie", 1);
+		String total = getTextRegex("Showing 11 to 20 of (\\d+) entries", "Showing 11 to 20 of 57 entries", 1);
 		System.out.println("Total = " + total);
 
 	}
