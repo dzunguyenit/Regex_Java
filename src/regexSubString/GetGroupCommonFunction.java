@@ -6,18 +6,18 @@ import java.util.regex.Pattern;
 public class GetGroupCommonFunction {
 
 	public static void main(String[] args) {
-		String total = getTextRegex("Showing 11 to 20 of (\\d+) entries", "Showing 11 to 20 of 57 entries", 1);
+		String total = getTextRegex("Showing 11 to 20 of (.*?) entries", "Showing 11 to 20 of 57 entries");
 		System.out.println("Total = " + total);
 
 	}
 
-	public static String getTextRegex(String regex, String text, int group) {
+	public static String getTextRegex(String regex, String text) {
 		String textRegex = "";
 		Pattern patternRegex = Pattern.compile(regex);
 		Matcher m = patternRegex.matcher(text);
 
 		if (m.find()) {
-			textRegex = m.group(group);
+			textRegex = m.group(1);
 		}
 		return textRegex;
 	}
